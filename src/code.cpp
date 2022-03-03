@@ -13,7 +13,7 @@ namespace assignment {
 
   // Task 2
   bool check_bit(int mask, int bit_pos) {
-    if ((mask < 0) || (bit_pos < 0)) {
+    if (mask < 0 || bit_pos < 0) {
       return false;
     }
 
@@ -39,8 +39,13 @@ namespace assignment {
 
   // Task 4
   void swap_args(int *left, int *right) {
+    if (left == nullptr || right == nullptr) {
+      return;
+    }
 
-    // Write your code here ...
+    int temp = *left;
+    *left = *right;
+    *right = temp;
   }
 
   // Task 5
