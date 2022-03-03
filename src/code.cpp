@@ -13,18 +13,28 @@ namespace assignment {
 
   // Task 2
   bool check_bit(int mask, int bit_pos) {
+    if ((mask < 0) || (bit_pos < 0)) {
+      return false;
+    }
 
-    // Write your code here ...
-
-    return false;
+    int filter = 1 << bit_pos;
+    return mask & filter;
   }
 
   // Task 3
   int max3(int left, int middle, int right) {
+    int m1;
+    if (left > middle) {
+      m1 = left;
+    } else {
+      m1 = middle;
+    }
 
-    // Write your code here ...
-
-    return 0;
+    if (m1 > right) {
+      return m1;
+    } else {
+      return right;
+    }
   }
 
   // Task 4
